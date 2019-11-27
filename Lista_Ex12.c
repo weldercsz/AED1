@@ -1,7 +1,7 @@
-//12.  Excluir o último elemento da lista.
+//12.  Excluir o Ãºltimo elemento da lista.
 
 #include <stdio.h>
-#include <stdLib.h>
+#include <stdlib.h>
 #include <math.h>
 
 typedef struct no
@@ -16,7 +16,7 @@ void removeUltimo(struct no *list)
 	//percorre a lista
 	while(list != NULL)
 	{	
-		//se o próximo dele for diferente de NULL então não é o ultimo
+		//se o prÃ³ximo dele for diferente de NULL entÃ£o nÃ£o Ã© o ultimo
 		if(list->prox != NULL)
 		{
 			aux = list;
@@ -32,8 +32,8 @@ void removeUltimo(struct no *list)
 	}
 }
 
-//No Main deve conter um método que gere uma lista
-//abaixo contém um exemplo para teste
+//No Main deve conter um mÃ©todo que gere uma lista
+//abaixo contÃ©m um exemplo para teste
 int main()
 {
 	lista *inicio = NULL, *aux;
@@ -42,8 +42,8 @@ int main()
 	printf("Digite o tamanho da lista: ");
 	scanf("%d", &nno);
 
-	//esse for criará uma lista sequencial decrescente, 
-	//base no método de inserção no início
+	//esse for criarÃ¡ uma lista sequencial decrescente, 
+	//base no mÃ©todo de inserÃ§Ã£o no inÃ­cio
 	for (i=0; i<nno; i++){
 		if((aux = (struct no*) malloc(sizeof(struct no))) != NULL)
 		{
@@ -53,7 +53,7 @@ int main()
 			//atribui o valor de NULL ao prox do no
 			aux -> prox = NULL;
 
-			//se inicio for diferente de NULL o no atual deve recebé-lo
+			//se inicio for diferente de NULL o no atual deve recebÃ©-lo
 			if (inicio != NULL)
 				aux ->prox = inicio;
 
