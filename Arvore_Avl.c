@@ -18,7 +18,7 @@ void liberar_memoria_impl( node * node_ptr )
 }
 
 
-void liberar_memoria( tree * tree_ptr )
+void liberar_memoria(tree * tree_ptr )
 {
 	liberar_memoria_impl ( tree_ptr->raiz );
 }
