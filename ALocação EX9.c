@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
+
 void ler_aposta(int *aposta, int n);
 void sorteia_valores(int *sorteio, int n);
 int *compara_aposta(int *aposta, int *sorteio, int *qtdacertos, int na, int ns);
@@ -74,3 +76,5 @@ int *compara_aposta(int *aposta, int *sorteio, int *qtdacertos, int na, int ns)
     }
     return acertos;
 }
+
+// Apostas!!
