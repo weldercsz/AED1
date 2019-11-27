@@ -36,7 +36,7 @@ int main()
 
 
     free(v);
-    free(vetor_minimo_maximo);
+    free(vetor_minimo_maxim);
 
     return 0;
 }
