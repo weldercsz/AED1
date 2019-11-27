@@ -17,7 +17,7 @@ int main()
   *(int *)pBuffer = 0;
   for (;;)
   {
-    printf("AGENDA ALEJANDRO\n");
+    printf("AGENDA APROVAÇÃO AED 1\n");
     printf("1)Inserir\n");
     printf("2)Buscar\n");
     printf("3)Apagar\n");
@@ -72,7 +72,7 @@ void *inserir(void *pBuffer)
 }
 void buscar(void *pBuffer)
 {
-  printf("Informe o nome que deseja buscar: ");
+  printf("Informe o nome  PARA buscar: ");
   scanf("%s", (char *)(pBuffer + (4 * sizeof(int))));
   for (*(int *)(pBuffer + (sizeof(int))) = 0; *(int *)(pBuffer + (sizeof(int))) < *(int *)pBuffer; *(int *)(pBuffer + (sizeof(int))) = *(int *)(pBuffer + (sizeof(int))) + 1)
   {
@@ -130,7 +130,7 @@ void insertion(void *pBuffer)
   }
 }
 void selection(void *pBuffer){
-//vou usar a variavel de controle switch para armazenar o min id
+  
 for(*(int *)(pBuffer + (sizeof(int))) = 0; *(int *)(pBuffer + (sizeof(int))) < (*(int *)pBuffer) - 1;*(int *)(pBuffer + (sizeof(int)))=*(int *)(pBuffer + (sizeof(int))) + 1){
 
 *(int *)(pBuffer + (3 * sizeof(int))) = *(int *)(pBuffer + (sizeof(int)));
