@@ -18,7 +18,8 @@ void vaziaArvore(no *raiz)
 	if (raiz == NULL){
 		printf("   A arvore esta vazia\n\n");
 	}
-	else {
+	else 
+	{
 		printf("   A arvore nao esta vazia\n\n");
 	}
 }
