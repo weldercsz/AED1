@@ -37,7 +37,8 @@ void InsereAVL (arvoreAVL *adesc, char dadonovo) {
  int achou; 
 
 //-------rotação simples---------------------
-void RotacaoSimples (){
+void RotacaoSimples ()
+{
  if (pP->fatbal == 1) {
    pP->dir = pQ->esq;
    pQ->esq = pP;
