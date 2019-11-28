@@ -198,5 +198,6 @@ main ()
 
 
  printf("\n\n");
- system("pause");
+ 
+return 0;
 }
