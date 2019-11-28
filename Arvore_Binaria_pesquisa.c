@@ -22,7 +22,7 @@ struct s_no{
 
 typedef t_no* t_arvore;
 
-/* ========== PROTÓTIPOS ========== */
+/* ========== PROTÃ“TIPOS ========== */
 int   menu               (void);
 t_no *criaNo             (void);
 bool  isVazia            (t_no *no);
@@ -151,8 +151,8 @@ t_no *criaNo (void)
 	t_no *novo = NULL;
 
 	novo = (t_no *) malloc (sizeof(t_no));
-	if(novo != NULL)
-	{
+	if(novo != NULL){
+	
 		novo->esq = novo->dir = NULL;
 		novo->dado.num = 0;
 	}
