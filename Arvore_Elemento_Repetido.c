@@ -34,7 +34,8 @@ int verifica_AVL(No* t) {
 }
 
 void escreve(No* r) {
-  if (r != NULL) {
+  if (r != NULL) 
+  {
     escreve(r->esq);
     printf("%d(%d)", r->v, r->bal);
     escreve(r->dir);
