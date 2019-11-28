@@ -11,7 +11,8 @@ struct no *esq, *dir;
 
 typedef struct no ARV;
 
-int menu(){
+int menu()
+{
 
     int opc;
 
@@ -406,7 +407,7 @@ break;
 
 case 5:
 
-printf("a qtd de elementos é: %i \n",qtd_nos(&r));
+printf("a qtd de elementos Ã©: %i \n",qtd_nos(&r));
 
 break;
 
@@ -470,7 +471,7 @@ break;
 
 case 11:
 
-printf("a altura da arvore é: %i \n",altura(&r));
+printf("a altura da arvore Ã©: %i \n",altura(&r));
 
 break;
 
