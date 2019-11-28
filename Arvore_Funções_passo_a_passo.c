@@ -13,7 +13,8 @@ typedef struct _no{
 
 no* auxPai = NULL;
 
-void vaziaArvore(no *raiz){
+void vaziaArvore(no *raiz)
+{
 	if (raiz == NULL){
 		printf("   A arvore esta vazia\n\n");
 	}
