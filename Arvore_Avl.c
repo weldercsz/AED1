@@ -56,8 +56,7 @@ node * init_node ( int valor )
 	return node_ptr;
 }
 
-int altura ( const node * const node_ptr )
-{
+int altura ( const node * const node_ptr ){
 	int altura_esq = 0;
 	int altura_dir = 0;
 
