@@ -1,19 +1,19 @@
 /**
- *  ¡RVORE BIN¡RIA
+ *  √ÅRVORE BIN√ÅRIA
  *
- * @todo Escreva um programa que contenha as seguintes FUNC’ES:
- * a) Mostre apenas os elementos folha de uma ·rvore bin·ria.
- * b) Mostre os elementos de uma ·rvore que se encontram em um determinado nÌvel (o us·rio informa o nÌvel desejado).
- * c) Calcule e mostre a soma de todos os valores de uma ·rvore.
- * d) Escreva uma funÁ„o recursiva que conta o n˙mero de folhas em uma ·rvore bin·ria.
- * e) Escreva uma funÁ„o que realiza um percurso em largura na ·rvore. VocÍ pode usar uma fila auxiliar.
+ * @todo Escreva um programa que contenha as seguintes FUNC√ïES:
+ * a) Mostre apenas os elementos folha de uma √°rvore bin√°ria.
+ * b) Mostre os elementos de uma √°rvore que se encontram em um determinado n√≠vel (o us√°rio informa o n√≠vel desejado).
+ * c) Calcule e mostre a soma de todos os valores de uma √°rvore.
+ * d) Escreva uma fun√ß√£o recursiva que conta o n√∫mero de folhas em uma √°rvore bin√°ria.
+ * e) Escreva uma fun√ß√£o que realiza um percurso em largura na √°rvore. Voc√™ pode usar uma fila auxiliar.
   */
 
 #include <stdlib.h>
 #include <stdio.h>
 
 
-/**  Cria ¡rvore Vazia
+/**  Cria √Årvore Vazia
  * 
 **/
 
@@ -44,7 +44,7 @@ No* arv_libera (No* a){
   return NULL;
 }
 
-/** Imprime a ¡rvore em PrÈ-Ordem
+/** Imprime a √Årvore em Pr√©-Ordem
  
 **/
 void arv_imprime_pre (No* a){
@@ -55,7 +55,7 @@ void arv_imprime_pre (No* a){
   }
 }
 
-/**  Imprime a ¡rvore em Pos-Ordem
+/**  Imprime a √Årvore em Pos-Ordem
  *  
 **/
 void arv_imprime_pos (No* a){
@@ -66,12 +66,12 @@ void arv_imprime_pos (No* a){
   }
 }
 
-/** Pesquisar valores na ¡rvore
+/** Pesquisar valores na √Årvore
  
 **/
 int busca (No* t, int v){
   if (arv_vazia(t))
-    return 0; //·rvore vazia: n„o encontrou
+    return 0; //√°rvore vazia: n√£o encontrou
   else if (v == t->v)
     return 1; //Valor encontrado
   else if (busca(t->esq, v))
@@ -80,7 +80,7 @@ int busca (No* t, int v){
     return busca(t->dir, v); //Valor encontrado na direita
 }
 
-/**  Exibir nÛs folhas da ¡rvore
+/* Exibir n√≥s folhas da √Årvore
  
 **/
 void mostra_folhas(No* a){
@@ -107,7 +107,7 @@ int conta_folhas(No* a){
   return 0 + conta_folhas(a->esq) + conta_folhas(a->dir);
 }
 
-/** Imprime a ¡rvore em Largura
+/** Imprime a √Årvore em Largura
  *  
 **/
 void largura(No* t){
@@ -134,7 +134,7 @@ void largura(No* t){
 
 }
 
-/* Somar nÛs da ¡rvore
+/* Somar n√≥s da √Årvore
  *  
 **/
 int soma_nos (No* p){
@@ -145,7 +145,7 @@ int soma_nos (No* p){
   return cont;
 }
 
-/** Altura da ¡rvore
+/** Altura da √Årvore
  * 
 **/
 int altura (No* a){
@@ -162,7 +162,7 @@ int altura (No* a){
   return d+1;
 }
 
-/**  Imprime NÛs de um nivel
+/**  Imprime N√≥s de um nivel
  *  
 **/
 void imprime_nivel (No* a, int nivel,int valor){
@@ -175,7 +175,7 @@ void imprime_nivel (No* a, int nivel,int valor){
   imprime_nivel(a->dir,nivel+1,valor);
 }
 
-/* Imprime ¡rvore
+/* Imprime √Årvore
  *  
 **/
 void imprime (No *p, int nivel){
@@ -189,7 +189,7 @@ void imprime (No *p, int nivel){
   imprime(p->esq,nivel+1);
 }
 
-/**Insere NÛ na ¡rvore
+/**Insere N√≥ na √Årvore
  * 
 **/
 No* abb_insere (No* a, int valor){
@@ -202,7 +202,7 @@ No* abb_insere (No* a, int valor){
   return a;
 }
 
-/**  Remove NÛ da ¡rvore
+/**  Remove N√≥ da √Årvore
  *
 **/
 No* remove_ArvBin (No* r, int valor){
@@ -212,31 +212,31 @@ No* remove_ArvBin (No* r, int valor){
     r->esq = remove_ArvBin(r->esq, valor);
   else if (r->v < valor)
     r->dir = remove_ArvBin(r->dir, valor);
-  else { /* achou o nÛ a remover */
-    /* nÛ sem filhos (Folhas) */
+  else { /* achou o n√≥ a remover */
+    /* n√≥ sem filhos (Folhas) */
     if (r->esq == NULL && r->dir == NULL) {
       free (r);
       r = NULL;
     }
-    /* nÛ sÛ tem filho ‡ direita */
+    /* n√≥ s√≥ tem filho √† direita */
     else if (r->esq == NULL) {
       No* t = r;
       r = r->dir;
       free (t);
     }
-    /* sÛ tem filho ‡ esquerda */
+    /* s√≥ tem filho √† esquerda */
     else if (r->dir == NULL) {
       No* t = r;
       r = r->esq;
       free (t);
     }
-    /* nÛ tem os dois filhos */
+    /* n√≥ tem os dois filhos */
     else {
       No* f = r->esq;
       while (f->dir != NULL) {
         f = f->dir;
       }
-      r->v = f->v; /* troca as informaÁıes */
+      r->v = f->v; /* troca as informa√ß√µes */
       f->v = valor;
       r->esq = remove_ArvBin(r->esq,valor);
     }
