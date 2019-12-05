@@ -1,7 +1,4 @@
 
-/* arvores binárias de pesquisa - balanceamento dinâmico pelo processo
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +9,7 @@ typedef struct nodo {
  struct nodo *esq, *dir;
 } arvoreAVL;
 
-//-------------------------------------------
+
 void LeArv(arvoreAVL **eainicio) {
  if (*eainicio == NULL) 
    printf (".");
@@ -23,22 +20,21 @@ void LeArv(arvoreAVL **eainicio) {
  }
 }
 
-//-------------------------------------------
+
 void InicializaAVL (arvoreAVL **eainicio){
  *eainicio = malloc (sizeof (arvoreAVL));
  (*eainicio)->esq = NULL;
  (*eainicio)->dir = NULL;
  }
 
-//-------------------------------------------
+
 void InsereAVL (arvoreAVL *adesc, char dadonovo) {
  arvoreAVL *paux, *pant, *pP, *pQ, *pantP, *pnovo;
  int poschave;
  int achou; 
 
-//-------rotação simples---------------------
-void RotacaoSimples ()
-{
+//rotação simples
+void RotacaoSimples (){
  if (pP->fatbal == 1) {
    pP->dir = pQ->esq;
    pQ->esq = pP;
@@ -52,9 +48,9 @@ void RotacaoSimples ()
  pQ->fatbal = 0;
 }
 
-//-------fim do rotação simples-------------
+//fim do rotação simples
 
-//-------rotação dupla ---------------------
+//rotação dupla 
 void RotacaoDupla (){
  if (pP->fatbal == 1) {
    paux = pQ->esq;
@@ -85,9 +81,9 @@ void RotacaoDupla (){
    }
  paux->fatbal = 0;
 }
-//-------fim do rotação dupla -------------
+//fim do rotação dupla 
 
-//-------ajustfatores---------------------
+//ajustfatores
 void AjustaFatoresAVL (){
  if (dadonovo < pP->dado){
    pQ = pP->esq;
@@ -107,9 +103,9 @@ void AjustaFatoresAVL (){
      paux = paux->dir;
    }
 }
-//-------fim do ajusta fatores-------------
+//fim do ajusta fatores
 
-//-------balanceia-------------------------
+//balanceia
 void BalanceiaAVL (){
  if (dadonovo < pP->dado)
    poschave = -1;
@@ -131,9 +127,9 @@ void BalanceiaAVL (){
        pantP->esq = paux;
    }
 }
-//-------fim do balanceia------------------
+//fim do balanceia
 
-//---- corpo do InsereAVL -----------------
+//corpo do InsereAVL 
  paux = adesc->dir;
  pP = paux;
  pant = adesc;
@@ -174,23 +170,23 @@ void BalanceiaAVL (){
  }
 }
 
-//--------------------------------------------
-main ()
+
+ int main ()
 {
  arvoreAVL *aini;
  char c, resp;
 
  InicializaAVL (&aini);  
  printf ("deseja entrar um primeiro valor na arvore? (s/n)\n");
- fflush(stdin);
+ 
  scanf ("%c" , &resp);
  while (resp == 's') {
    printf ("entre com valor a ser inserido na arvore\n");
-   fflush(stdin);
+ 
    scanf ("%c" , &c);  
    InsereAVL (aini, c);
    printf ("deseja entra mais algum valor? (s/n)\n");
-   fflush(stdin);
+  
    scanf ("%c" , &resp);
  }
 
@@ -198,6 +194,5 @@ main ()
 
 
  printf("\n\n");
- 
-return 0;
+
 }
