@@ -1,6 +1,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include <string.h>
+
 
 
 int quantidadeNos = 0;
@@ -86,6 +89,7 @@ void consultarValor(no* raiz){
 }
 
 void consultarDetalhes(no* raiz){
+	
 	int num;
 	no* aux;
 	printf("Digite o numero procurado: ");
@@ -118,6 +122,7 @@ void consultarDetalhes(no* raiz){
 }
 
 void imprime(no *p, int nivel){
+	
 	int i;
 	if(p == NULL)
 		return;
@@ -130,10 +135,14 @@ void imprime(no *p, int nivel){
 }
 
 void consultaNivel(no *p){
+	
 	int i, nivel;
+	
 	if(p == NULL)
 		return;
+		
 	imprime(p->dir, nivel+1);
+	
 	for(i=0;i<nivel;i++)
 		printf("      ");
 	printf("%6d\n\n",p->chave);
@@ -166,6 +175,7 @@ void posordem(no *arvore){
 
 
 int menu(){
+	
 	int op;
 	printf("\nMENU\n\n");
 	printf("1 - Inserir valor\n");
